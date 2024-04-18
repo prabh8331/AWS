@@ -13,13 +13,13 @@ applications, and other IT resources
 
 ### The Deployment Models of the Cloud 
 
-Private Cloud: provider - rackspace - cloud service used by single organization, not exposed to the public 
+Private Cloud: provider - rackspace - cloud service used by single organization, not exposed to the public
 
 Public Cloud: provider - AWS, GCP, Azure
 cloud resources owned and operated by a third party cloud service provider delivered over the internet
 
 Hybrid Cloud :
-keep some server on premises and extend  some capabilities to the cloud
+keep some server on premises and extend some capabilities to the cloud
 
 ### The 5 Characteristics of Cloud Computing
 
@@ -45,7 +45,7 @@ keep some server on premises and extend  some capabilities to the cloud
 - Scalability
 - Elasticity
 - High-availability and fault-tolerance
-- Aglity
+- Agility
 
 ### Types of Cloud Computing
 
