@@ -146,3 +146,17 @@ You are responsible for thing what AWS will not do for you
 - Access Keys: access AWS using the CLI or SDK
 - Audit: IAM Credential Reports & IAM Access Advisor
 
+
+### AWS Budget Setup
+
+1. Activate Billing infromation for IAM users
+    Go to username on top right - open dropdown - Account
+    IAM user and role access to Billing information - Edit
+    Activate IAM Access
+2. Bills
+    See bills to check which service is costing -
+    Go to username on top right - open dropdown - Billing and Cost Management - bills
+3. Budgets
+   Go to username on top right - open dropdown - Billing and Cost Management - budgets
+   Create a budget
+
