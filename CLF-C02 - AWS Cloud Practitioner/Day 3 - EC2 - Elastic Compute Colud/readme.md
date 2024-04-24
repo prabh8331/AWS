@@ -154,3 +154,45 @@ Types of EC2 Instance -
 
 ### Introduction to Security Groups
 
+1. Security groups are fundamental of network security in AWS, acting as a firewall on EC2 instances and they can attached to multiple instance
+
+each region/ VPC has separate security group, in change region / VPC need to create new rule
+
+security groups are outside from the EC2 instance it is septate layer
+
+2. They control how traffic is allowed into or out of EC2 instances, they regulate - Access to Ports, Authorized IP ranges (IPv4 and Ipv6), control inbound network (other to instance), control outbound network (instance to other)
+
+All inbound traffic is blocked by default
+All outbound traffic is authorized by default
+
+
+3. Security groups only contain allow rules
+4. Security groups rules can reference by IP or by security group
+
+
+
+- If your application is not accessible (time out), then it’s a security group issue
+- If your application gives a “connection refused“ error, then it’s an application error or it’s not launched
+- It’s good to maintain one separate security group for SSH access
+
+Classic Ports to Know- 
+22 = SSH (Secure Shell) - log into a Linux instance
+21 = FTP (File Transfer Protocol) – upload files into a file share
+22 = SFTP (Secure File Transfer Protocol) – upload files using SSH
+80 = HTTP – access unsecured websites
+443 = HTTPS – access secured websites
+3389 = RDP (Remote Desktop Protocol) – log into a Windows instance
+
+### Security Group hands on
+
+security group - inbound rule - a way of exposing a port to internet
+
+1. Instance --> security --> can see small idea of security group attached to this instance
+2. EC2 console --> Network & Security --> Security Groups
+   - here we can see all the security groups, and see there inbound and outbound rules
+
+### SSH Overview
+
+SSH into your EC2 instance - 
+
+
