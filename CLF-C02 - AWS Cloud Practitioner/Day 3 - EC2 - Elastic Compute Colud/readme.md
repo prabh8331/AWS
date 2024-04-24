@@ -195,4 +195,111 @@ security group - inbound rule - a way of exposing a port to internet
 
 SSH into your EC2 instance - 
 
+while creating EC2 instance we created key pair and downloaded .pem file
+
+copy this .pem file and paste it on the linux server
+
+now from the instance copy the public ipv4 - 34.235.155.192
+
+ec2-user is defaut user setup while creating instance
+
+ssh ec2-user@34.235.155.192
+this will fail 
+
+
+ssh -i EC2_first.pem ec2-user@34.235.155.192
+
+
+if get permission error use - 
+chmod 0400 EC2_first.pem
+
+### EC2 Instance connect
+
+GO to --> Instances --> select the instance --> click "Connect" on top --> connect using EC2 instance connect --> connect
+
+if i close 22 port from inbound rule then ssh/ec2 instance connect will not work
+
+
+
+### EC2 Instance Roles Demo
+
+To run aws command from EC2 instance we need to provide this EC2 instance with permissions
+
+```bash 
+
+aws iam list-users
+
+    # Unable to locate credentials. You can configure credentials by running "aws configure".
+    # but we don't have to do aws configure and put access keys this is not good idea
+    # because anyone on this account can connect to EC2 instance and retrieve the values of IAM APA key
+```
+
+Instead we use IAM Roles
+
+IAM > ROles > 
+we already have a role created called EC2TestRole which have IAMReadOnlyAccess
+
+Attach roles to EC2 instance 
+EC2 Console > Instances > select the instance > Security    -- this will show there is not IAM role
+EC2 Console > Instances > select the instance > Action > Security > Modify IAM role > choose IAM role (EC2TestRole) > Save
+
+```bash 
+
+aws iam list-users
+# now this will work
+```
+
+
+### EC2 Instance Purchasing Options
+
+1. On-Demand instance - short workload, predictable pricing, pay by second
+2. Reserved (1 to 3 years)
+
+     - Reserved Instance - Long workloads
+     - Convertible Reserved Instance - Long workloads with flexible instances
+
+3. Saving Plans
+4. Spot Instance - short workloads, cheap, can lose instances (less reliable)
+
+    - Most cost-efficient
+    - Batch jobs
+    - Data analysis
+    - Image processing
+    - Any distributed workloads
+    - Workloads with flexible start and end time
+
+    **Not suitable for critical jobs or databases**
+
+5. Dedicated Hosts - book an entire physical server , control instance placement
+
+    - most expensive option
+    - allows address compliance requirements and use existing server- bound software licenses (per-socket, per-core, pe- vm software licenses)
+    - useful for software with complicated licensing model
+    - or compaines have strong regulatory or compliance needs
+
+6. Dedicated Instance - on other customer will share your hardware
+    - Instance run on hardware that's dedicated to you
+    - May share hardware with other instance in same account
+    - no control over instance placement
+
+7. Capacity Reservation- reserve capacity in a specific AZ for any duration
+
+
+### Shared responsibility model
+
+AWS
+
+- infrastructure (global network secutiry)
+- Isolation on physical hosts
+- replacing faulty hardware
+- compliance validation
+
+User
+
+- security groups rules
+- operation-system patches and updates
+- software and utilities installed on the EC2 instance
+- IAM roles assigned to EC2 & IAM user access management
+- Data security on your instance
+
 
