@@ -10,6 +10,7 @@
   - AWS Software Developer Kit (SDK) - for code: protected by access keys
 - Users manager their own access keys
 
+**Create accesskey -- **
 Go to username on top right - open dropdown - Security credentials 
 Access keys - create access key
 - use case - Command Line interface (CLI)

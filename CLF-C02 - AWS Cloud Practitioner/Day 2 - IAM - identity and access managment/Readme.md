@@ -12,7 +12,7 @@ IAM: Permissions
 
 - Users or groups can be assigned JSON documents called policies 
 - These policies define the permissions of the users
-- in AWS you apply hte least privilege principle: don't give more permissions than a user needs
+- in AWS you apply the least privilege principle: don't give more permissions than a user needs
 
 
 ```JSON
