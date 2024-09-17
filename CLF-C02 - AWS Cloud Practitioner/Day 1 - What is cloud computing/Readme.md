@@ -5,6 +5,11 @@ Go to
 https://portal.aws.amazon.com/
 and sign up 
 
+## Traditional IT Overview
+
+
+server is acomodity hardware: it is CPU and RAM , Storeage, Database, Network (Routers, switch)
+
 
 ## What is Cloud Computing 
 
