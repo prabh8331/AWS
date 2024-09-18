@@ -9,6 +9,11 @@ and sign up
 
 
 server is acomodity hardware: it is CPU and RAM , Storeage, Database, Network (Routers, switch)
+•Network: cables, routers and servers connected with each other
+•Router : A networking device that forwards data packets between computer 
+networks. They know where to send your packets on the internet!
+•Switch: Takes a packet and send it to the correct server / client on your network
+Router Switch
 
 
 ## What is Cloud Computing 
@@ -85,6 +90,19 @@ keep some server on premises and extend some capabilities to the cloud
         - Google Apps (Gmail), Dropbox, Zoom
 
 
+| On-Premises        |  **IAAS** (Infrastructure as a Service) | **PAAS** (Platform as a Service) | **SaaS** (Software as a Service) |
+|--------------------|-------------------------|---------------------------------|---------------------|
+| Applications       | Applications            | Applications                 | **Applications**    |
+| Data           | Data                | Data                         | **Data**            |
+| Runtime        | Runtime             | **Runtime**                      | **Runtime**         |
+| Middleware     | Middleware          | **Middleware**                   | **Middleware**      |
+| O/S            | O/S                 | **O/S**                          | **O/S**             |
+| Virtualization | **Virtualization**          | **Virtualization**               | **Virtualization**  |
+| Servers        | **Servers**                 | **Servers**                      | **Servers**         |
+| Storage        | **Storage**                 | **Storage**                      | **Storage**         |
+| Networking     | **Networking**              | **Networking**                   | **Networking**      |
+
+
 Pricing of the Cloud
 AWS has 3 pricing fundamentals, following the pay-as-you-go pricing model (solves the expensive issue of traditional IT)
 - Compute
@@ -93,6 +111,14 @@ AWS has 3 pricing fundamentals, following the pay-as-you-go pricing model (solve
   - Pay for data stored in the Cloud
 - Data transfer OUT of the cloud
   - Data transfer IN is free
+
+### AWS Global Infrastructure
+•AWS Regions
+•AWS Availability Zones
+•AWS Data Centers
+•AWS Edge Locations / 
+Points of Presence
+•https://infrastructure.aws/
 
 
 ### AWS Regions 
@@ -136,7 +162,7 @@ AWS Points of Presence (Edge Locations)
    - Amazon EC2 (Infrastructure as a Service)
    - Elastic Beanstalk (Platform as a Service)
    - Lambda (Function as a Service)
-
+   - Rekognition (Software as a Service)
 
 - chose region geographically close
 - In top right shows Global/region selection
