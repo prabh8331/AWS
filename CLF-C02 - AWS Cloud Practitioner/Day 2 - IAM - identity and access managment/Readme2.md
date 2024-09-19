@@ -48,6 +48,8 @@ sudo ./aws/install
 
 aws --version
 
+# now go to AWS console: IAM--> Users --> prabh-singh1 --> Create access key --> select (CLI) --> create access key --> download .csv
+# ap-south-1 is Asia Pacific (Mumbai)
 aws configure
 
     AWS Access Key ID [None]: youraccesskeyid
@@ -66,7 +68,9 @@ aws iam list-users
 
 alternative is CloudShell of AWS
 
-
+default region of cloudshell is region we are loged in from
+following command can be used to tell from which region to send command (api call)
+aws iam list-users --region
 
 
 ### IAM Roles for Service
